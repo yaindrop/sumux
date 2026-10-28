@@ -82,8 +82,20 @@ for target in ${requested_targets}; do
   esac
   seen_targets="${seen_targets} ${target}"
   ensure_rust_target "$target"
-  cargo build --manifest-path "${CRATE_DIR}/Cargo.toml" --release --target "$target"
-  source_lib="${CRATE_DIR}/target/${target}/release/${LIB_NAME}"
+  host_target="$(rustc -vV | awk '/^host:/{print $2}')"
+  if [ "$target" = "$host_target" ]; then
+    env -u SDKROOT -u DEVELOPER_DIR -u TOOLCHAINS -u CC -u CXX -u CFLAGS -u CXXFLAGS -u CPPFLAGS -u LDFLAGS \
+      PATH="/usr/bin:/bin:${CARGO_HOME:-$HOME/.cargo}/bin:/opt/homebrew/bin:${PATH}" \
+      RUSTC_WRAPPER="${ROOT}/scripts/rustc-strip-provenance.sh" \
+      cargo build --manifest-path "${CRATE_DIR}/Cargo.toml" --release
+    source_lib="${CRATE_DIR}/target/release/${LIB_NAME}"
+  else
+    env -u SDKROOT -u DEVELOPER_DIR -u TOOLCHAINS -u CC -u CXX -u CFLAGS -u CXXFLAGS -u CPPFLAGS -u LDFLAGS \
+      PATH="/usr/bin:/bin:${CARGO_HOME:-$HOME/.cargo}/bin:/opt/homebrew/bin:${PATH}" \
+      RUSTC_WRAPPER="${ROOT}/scripts/rustc-strip-provenance.sh" \
+      cargo build --manifest-path "${CRATE_DIR}/Cargo.toml" --release --target "$target"
+    source_lib="${CRATE_DIR}/target/${target}/release/${LIB_NAME}"
+  fi
   if [ ! -f "${source_lib}" ]; then
     echo "error: expected nucleo FFI library at ${source_lib}" >&2
     exit 1

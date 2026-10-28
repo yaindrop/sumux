@@ -60,16 +60,45 @@ for arch in $requested_archs; do
   seen_targets="$seen_targets $target"
   ensure_rust_target "$target"
   target_dir="${BUILD_WORK_DIR}/${target}"
-  CARGO_TARGET_DIR="$target_dir" \
-    MACOSX_DEPLOYMENT_TARGET="${CMUX_DIFF_SIDECAR_MIN_MACOS:-14.0}" \
-    "$CARGO_RUNNER" build \
-      --manifest-path "${CRATE_DIR}/Cargo.toml" \
-      --bin "$BINARY_NAME" \
-      --release \
-      --locked \
-      --target "$target" \
-      --no-default-features
-  source_binary="${target_dir}/${target}/release/${BINARY_NAME}"
+  host_target="$(rustup run "$TOOLCHAIN" rustc -vV | awk '/^host:/{print $2}')"
+  # Passing --target equal to the host makes Cargo put proc-macro dylibs in
+  # the host dir and then fail to find them. Build natively in that case.
+  # macOS bash 3.2 treats an empty "${array[@]}" as unbound under set -u.
+  if [[ "$target" == "$host_target" ]]; then
+    artifact_dir="${target_dir}"
+    env -u SDKROOT -u DEVELOPER_DIR -u TOOLCHAINS -u CC -u CXX -u CFLAGS -u CXXFLAGS -u CPPFLAGS -u LDFLAGS \
+      PATH="/usr/bin:/bin:${CARGO_HOME:-$HOME/.cargo}/bin:/opt/homebrew/bin:${PATH}" \
+      RUSTC_WRAPPER="${ROOT}/scripts/rustc-strip-provenance.sh" \
+      CARGO_TARGET_DIR="$target_dir" \
+      MACOSX_DEPLOYMENT_TARGET="${CMUX_DIFF_SIDECAR_MIN_MACOS:-14.0}" \
+      "$CARGO_RUNNER" build \
+        --manifest-path "${CRATE_DIR}/Cargo.toml" \
+        --bin "$BINARY_NAME" \
+        --release \
+        --locked \
+        --jobs 1 \
+        --config 'profile.release.lto="off"' \
+        --config 'profile.release.strip="none"' \
+        --no-default-features
+  else
+    artifact_dir="${target_dir}/${target}"
+    env -u SDKROOT -u DEVELOPER_DIR -u TOOLCHAINS -u CC -u CXX -u CFLAGS -u CXXFLAGS -u CPPFLAGS -u LDFLAGS \
+      PATH="/usr/bin:/bin:${CARGO_HOME:-$HOME/.cargo}/bin:/opt/homebrew/bin:${PATH}" \
+      RUSTC_WRAPPER="${ROOT}/scripts/rustc-strip-provenance.sh" \
+      CARGO_TARGET_DIR="$target_dir" \
+      MACOSX_DEPLOYMENT_TARGET="${CMUX_DIFF_SIDECAR_MIN_MACOS:-14.0}" \
+      "$CARGO_RUNNER" build \
+        --manifest-path "${CRATE_DIR}/Cargo.toml" \
+        --bin "$BINARY_NAME" \
+        --release \
+        --locked \
+        --jobs 1 \
+        --config 'profile.release.lto="off"' \
+        --config 'profile.release.strip="none"' \
+        --target "$target" \
+        --no-default-features
+  fi
+  source_binary="${artifact_dir}/release/${BINARY_NAME}"
   [[ -x "$source_binary" ]] || { echo "error: missing ${source_binary}" >&2; exit 1; }
   binaries+=("$source_binary")
 done
@@ -81,6 +110,8 @@ else
   lipo -create -output "$output_binary" "${binaries[@]}"
 fi
 chmod +x "$output_binary"
+# Cargo strip breaks proc-macro dylibs during the build. Strip the finished binary instead.
+strip "$output_binary"
 "${ROOT}/scripts/verify-diff-sidecar-artifact.sh" "$output_binary" --archs "$requested_archs"
 
 if [[ -z "${TARGET_BUILD_DIR:-}" ]]; then
