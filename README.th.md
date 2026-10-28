@@ -361,10 +361,6 @@ tmux เป็น terminal multiplexer ที่รันอยู่ภาย�
 
 ใช่ cmux ใช้งานได้ฟรี ซอร์สโค้ดมีให้บน [GitHub](https://github.com/manaflow-ai/cmux)
 
-### ผมจะสนับสนุน cmux ได้อย่างไร?
-
-cmux ฟรีและโอเพนซอร์ส และจะเป็นเช่นนั้นเสมอ หากคุณต้องการสนับสนุนการพัฒนาและรับการเข้าถึงสิ่งที่กำลังจะมาก่อนใคร รวมถึง cmux AI, แอป iOS และ Cloud VMs ลองดู [cmux Founders Edition](https://github.com/manaflow-ai/cmux#founders-edition)
-
 ### ผมมีคำขอฟีเจอร์หรือพบบั๊ก?
 
 เราอยากได้ยิน เปิด [issue](https://github.com/manaflow-ai/cmux/issues) หรือ [pull request](https://github.com/manaflow-ai/cmux/pulls) บน GitHub หรือ [อีเมลหาเรา](mailto:founders@manaflow.com?subject=cmux%20feature%20request)
@@ -403,21 +399,6 @@ cmux ฟรีและโอเพนซอร์ส และจะเป็�
   <img src="./docs/assets/wechat-community-qr.jpg" alt="คิวอาร์โค้ด WeChat สำหรับเข้าร่วมชุมชน cmux" width="240" />
 </p>
 
-## Founder's Edition
-
-cmux ฟรี โอเพนซอร์ส และจะเป็นเช่นนั้นเสมอ หากคุณต้องการสนับสนุนการพัฒนาและรับการเข้าถึงสิ่งที่กำลังจะมาก่อนใคร:
-
-**[รับ Founder's Edition](https://buy.stripe.com/3cI00j2Ld0it5OU33r5EY0q)**
-
-- **คำขอฟีเจอร์/การแก้บั๊กที่ได้รับการจัดลำดับความสำคัญ**
-- **เข้าถึงก่อนใคร: cmux AI ที่ให้บริบทเกี่ยวกับทุกพื้นที่ทำงาน แท็บ และแผง**
-- **เข้าถึงก่อนใคร: แอป iOS ที่ซิงค์เทอร์มินัลระหว่างเดสก์ท็อปและโทรศัพท์**
-- **เข้าถึงก่อนใคร: Cloud VMs**
-- **เข้าถึงก่อนใคร: โหมดเสียง**
-- **iMessage/WhatsApp ส่วนตัวของผม**
-
 ## สัญญาอนุญาต
 
 cmux เป็นโอเพนซอร์สภายใต้ [GPL-3.0-or-later](LICENSE)
-
-หากองค์กรของคุณไม่สามารถปฏิบัติตาม GPL ได้ มีสัญญาอนุญาตเชิงพาณิชย์ให้บริการ ติดต่อ [founders@manaflow.com](mailto:founders@manaflow.com) สำหรับรายละเอียด

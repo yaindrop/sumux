@@ -80,7 +80,7 @@ def parse_swift_registry(text: str) -> list[dict]:
 def grep_key_files(key: str) -> set[str]:
     out = subprocess.run(
         ["git", "grep", "-l", "--untracked", "--fixed-strings", key, "--",
-         "web", "Sources", "Packages", "ios", "CLI",
+         "Sources", "Packages", "ios", "CLI",
          ":!*node_modules*"],
         cwd=REPO, capture_output=True, text=True,
     )

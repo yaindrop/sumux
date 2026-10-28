@@ -293,34 +293,6 @@ jobs:
       - name: Validate remote daemon release assets
         run: ./tests/test_remote_daemon_release_assets.sh
 
-  web-typecheck:
-    needs: changes
-    if: ${{ needs.changes.outputs.web == 'true' }}
-    runs-on: ${{ vars.LINUX_RUNNER || 'blacksmith-4vcpu-ubuntu-2404' }}
-    defaults:
-      run:
-        working-directory: web
-    steps:
-      - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
-        with:
-          bun-version: "1.3.14"
-
-      - name: Install dependencies
-        run: bun install --frozen-lockfile
-
-      - name: Validate managed relay catalog
-        run: bun tools/generate-managed-iroh-relay-catalog.ts --check
-
-      - name: Typecheck
-        run: bun run typecheck
-
-      - name: Web tests
-        run: bun run test
-
   # Checks for in-app React webviews (currently the diff viewer; more cmux React
   # surfaces will live alongside it).
   react-apps-check:
@@ -393,56 +365,6 @@ jobs:
         env:
           CMUX_DIFF_WEB_BENCH_ITERATIONS: "10"
         run: ./scripts/benchmark-diff-viewer.sh
-
-  web-db-migrations:
-    needs: changes
-    if: ${{ needs.changes.outputs.web == 'true' }}
-    runs-on: ${{ vars.LINUX_RUNNER || 'blacksmith-4vcpu-ubuntu-2404' }}
-    defaults:
-      run:
-        working-directory: web
-    services:
-      postgres:
-        image: postgres:16-alpine
-        env:
-          POSTGRES_DB: cmux_test
-          POSTGRES_PASSWORD: cmux
-          POSTGRES_USER: cmux
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd "pg_isready -U cmux -d cmux_test"
-          --health-interval 1s
-          --health-timeout 5s
-          --health-retries 30
-    steps:
-      - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
-
-      - name: Install dependencies
-        run: bun install --frozen-lockfile
-
-      - name: Apply migrations
-        env:
-          DATABASE_URL: postgres://cmux:cmux@localhost:5432/cmux_test
-          DIRECT_DATABASE_URL: postgres://cmux:cmux@localhost:5432/cmux_test
-        run: bunx drizzle-kit migrate --config drizzle.config.ts
-
-      - name: Re-apply migrations
-        env:
-          DATABASE_URL: postgres://cmux:cmux@localhost:5432/cmux_test
-          DIRECT_DATABASE_URL: postgres://cmux:cmux@localhost:5432/cmux_test
-        run: bunx drizzle-kit migrate --config drizzle.config.ts
-
-      - name: Database behavior tests
-        env:
-          CMUX_DB_TEST: "1"
-          DATABASE_URL: postgres://cmux:cmux@localhost:5432/cmux_test
-          DIRECT_DATABASE_URL: postgres://cmux:cmux@localhost:5432/cmux_test
-        run: bun run test:db:behavior
 
   app-host-unit-tests:
     needs:
@@ -1400,10 +1322,8 @@ jobs:
       - changes
       - workflow-guard-tests
       - remote-daemon-tests
-      - web-typecheck
       - react-apps-check
       - diff-sidecar-check
-      - web-db-migrations
       - agent-session-web-resources
     if: ${{ always() }}
     runs-on: ${{ vars.LINUX_RUNNER || 'blacksmith-4vcpu-ubuntu-2404' }}
@@ -1422,10 +1342,8 @@ jobs:
           required = ("changes", "workflow-guard-tests")
           allowed_routed = {
               "remote-daemon-tests",
-              "web-typecheck",
               "react-apps-check",
               "diff-sidecar-check",
-              "web-db-migrations",
               "agent-session-web-resources",
           }
 
@@ -1438,10 +1356,8 @@ jobs:
           outputs = needs["changes"].get("outputs", {})
           routed_outputs = {
               "remote-daemon-tests": "go",
-              "web-typecheck": "web",
               "react-apps-check": "web",
               "diff-sidecar-check": "macos",
-              "web-db-migrations": "web",
               "agent-session-web-resources": "agent_session_web",
           }
           for name in sorted(allowed_routed):
@@ -1985,10 +1901,8 @@ jobs:
       - changes
       - workflow-guard-tests
       - remote-daemon-tests
-      - web-typecheck
       - react-apps-check
       - diff-sidecar-check
-      - web-db-migrations
       - linux-preflight
       - app-host-unit-tests
       - tests

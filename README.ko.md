@@ -361,10 +361,6 @@ tmux는 어떤 터미널 안에서든 실행되는 터미널 멀티플렉서예�
 
 네, cmux는 무료로 사용할 수 있어요. 소스 코드는 [GitHub](https://github.com/manaflow-ai/cmux)에서 볼 수 있어요.
 
-### cmux를 어떻게 지원할 수 있나요?
-
-cmux는 무료이고 오픈 소스이며, 앞으로도 그럴 거예요. 개발을 후원하고 cmux AI, iOS 앱, Cloud VMs를 포함해 다음에 나올 것들에 먼저 접근하고 싶다면, [cmux Founders Edition](https://github.com/manaflow-ai/cmux#founders-edition)을 확인해주세요.
-
 ### 기능 요청이 있거나 버그를 발견했어요?
 
 꼭 듣고 싶어요. GitHub에서 [issue](https://github.com/manaflow-ai/cmux/issues)나 [pull request](https://github.com/manaflow-ai/cmux/pulls)를 열거나, [이메일을 보내주세요](mailto:founders@manaflow.com?subject=cmux%20feature%20request).
@@ -403,21 +399,6 @@ cmux는 무료이고 오픈 소스이며, 앞으로도 그럴 거예요. 개발�
   <img src="./docs/assets/wechat-community-qr.jpg" alt="cmux 커뮤니티에 참여하기 위한 WeChat QR 코드" width="240" />
 </p>
 
-## Founder's Edition
-
-cmux는 무료이고 오픈 소스이며, 앞으로도 그럴 거예요. 개발을 지원하고 다음에 나올 기능에 먼저 접근하고 싶다면:
-
-**[Founder's Edition 구매하기](https://buy.stripe.com/3cI00j2Ld0it5OU33r5EY0q)**
-
-- **기능 요청/버그 수정 우선 처리**
-- **얼리 액세스: 모든 워크스페이스, 탭, 패널의 컨텍스트를 제공하는 cmux AI**
-- **얼리 액세스: 데스크톱과 휴대폰 간 터미널을 동기화하는 iOS 앱**
-- **얼리 액세스: 클라우드 VM**
-- **얼리 액세스: 음성 모드**
-- **저의 개인 iMessage/WhatsApp**
-
 ## 라이선스
 
 cmux는 [GPL-3.0-or-later](LICENSE) 하에 오픈 소스예요.
-
-GPL을 준수할 수 없는 조직을 위해 상용 라이선스도 제공돼요. 자세한 내용은 [founders@manaflow.com](mailto:founders@manaflow.com)으로 문의해주세요.

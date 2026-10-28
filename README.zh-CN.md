@@ -361,10 +361,6 @@ tmux 是一个在任意终端内运行的终端复用器。cmux 是一个带 GUI
 
 是的，cmux 免费使用。源代码可在 [GitHub](https://github.com/manaflow-ai/cmux) 上获取。
 
-### 我如何支持 cmux？
-
-cmux 免费且开源，并将一直如此。如果您想支持开发并提前体验接下来的功能，包括 cmux AI、iOS 应用和 Cloud VMs，请查看 [cmux Founders Edition](https://github.com/manaflow-ai/cmux#founders-edition)。
-
 ### 我有功能请求或发现了 bug？
 
 我们很想听到。请在 GitHub 上提交 [issue](https://github.com/manaflow-ai/cmux/issues) 或 [pull request](https://github.com/manaflow-ai/cmux/pulls)，或者 [给我们发邮件](mailto:founders@manaflow.com?subject=cmux%20feature%20request)。
@@ -403,21 +399,6 @@ cmux 免费且开源，并将一直如此。如果您想支持开发并提前体
   <img src="./docs/assets/wechat-community-qr.jpg" alt="用于加入 cmux 社区的 WeChat 二维码" width="240" />
 </p>
 
-## Founder's Edition
-
-cmux 免费、开源，并将一直如此。如果您想支持开发并提前体验即将推出的功能：
-
-**[获取 Founder's Edition](https://buy.stripe.com/3cI00j2Ld0it5OU33r5EY0q)**
-
-- **功能请求/Bug 修复优先处理**
-- **抢先体验：为每个工作区、标签页和面板提供上下文的 cmux AI**
-- **抢先体验：桌面与手机间终端同步的 iOS 应用**
-- **抢先体验：云端虚拟机**
-- **抢先体验：语音模式**
-- **我的个人 iMessage/WhatsApp**
-
 ## 许可证
 
-cmux 以 [GPL-3.0-or-later](LICENSE) 开源。
-
-如果您的组织无法遵守 GPL，可提供商业许可证。详情请联系 [founders@manaflow.com](mailto:founders@manaflow.com)。
+这份 fork 只使用 [GPL-3.0-or-later](LICENSE)。Business Source License 的服务端目录不在其中，也不包含付费的 Founder's Edition。

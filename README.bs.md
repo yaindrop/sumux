@@ -361,10 +361,6 @@ tmux je terminalni multiplekser koji radi unutar bilo kojeg terminala. cmux je n
 
 Da, cmux je besplatan za korištenje. Izvorni kod je dostupan na [GitHub-u](https://github.com/manaflow-ai/cmux).
 
-### Kako mogu podržati cmux?
-
-cmux je besplatan i otvorenog koda, i uvijek će biti. Ako želite podržati razvoj i dobiti rani pristup onome što slijedi, uključujući cmux AI, iOS aplikaciju i Cloud VMs, pogledajte [cmux Founders Edition](https://github.com/manaflow-ai/cmux#founders-edition).
-
 ### Imam zahtjev za funkciju ili sam pronašao grešku?
 
 Želimo to čuti. Otvorite [issue](https://github.com/manaflow-ai/cmux/issues) ili [pull request](https://github.com/manaflow-ai/cmux/pulls) na GitHub-u, ili nam [pošaljite email](mailto:founders@manaflow.com?subject=cmux%20feature%20request).
@@ -403,21 +399,6 @@ Načini da se uključite:
   <img src="./docs/assets/wechat-community-qr.jpg" alt="WeChat QR kod za pridruživanje cmux zajednici" width="240" />
 </p>
 
-## Osnivačko izdanje
-
-cmux je besplatan, otvorenog koda i uvijek će biti. Ako želite podržati razvoj i dobiti rani pristup onome što dolazi:
-
-**[Nabavite Osnivačko izdanje](https://buy.stripe.com/3cI00j2Ld0it5OU33r5EY0q)**
-
-- **Prioritetni zahtjevi za funkcije/ispravke grešaka**
-- **Rani pristup: cmux AI koji vam daje kontekst o svakom radnom prostoru, tabu i panelu**
-- **Rani pristup: iOS aplikacija sa terminalima sinhroniziranim između desktopa i telefona**
-- **Rani pristup: Cloud VM-ovi**
-- **Rani pristup: Glasovni režim**
-- **Moj lični iMessage/WhatsApp**
-
 ## Licenca
 
 cmux je otvorenog koda pod [GPL-3.0-or-later](LICENSE) licencom.
-
-Ako vaša organizacija ne može ispuniti uslove GPL-a, dostupna je komercijalna licenca. Kontaktirajte [founders@manaflow.com](mailto:founders@manaflow.com) za detalje.

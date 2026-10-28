@@ -361,10 +361,6 @@ tmux គឺ​ជា terminal multiplexer ដែល​ដំណើរ​កា�
 
 មែន cmux ឥត​គិត​ថ្លៃ​ក្នុង​ការ​ប្រើ​ប្រាស់។ កូដ​ប្រភព​មាន​នៅ​លើ [GitHub](https://github.com/manaflow-ai/cmux)។
 
-### តើ​ខ្ញុំ​អាច​គាំទ្រ cmux យ៉ាង​ដូចម្ដេច?
-
-cmux ឥត​គិត​ថ្លៃ​និង open source ហើយ​នឹង​នៅ​តែ​បែប​នេះ​ជានិច្ច។ ប្រសិន​បើ​អ្នក​ចង់​គាំទ្រ​ការ​អភិវឌ្ឍ​និង​ទទួល​បាន​ការ​ចូល​ដំណើរ​ការ​មុន​គេ​ចំពោះ​អ្វី​ដែល​នឹង​មក​ដល់ រួម​ទាំង cmux AI, កម្មវិធី iOS និង Cloud VMs សូម​មើល [cmux Founders Edition](https://github.com/manaflow-ai/cmux#founders-edition)។
-
 ### ខ្ញុំ​មាន​សំណើ​មុខងារ ឬ​រក​ឃើញ​កំហុស?
 
 យើង​ចង់​ស្ដាប់​វា។ បើក [issue](https://github.com/manaflow-ai/cmux/issues) ឬ [pull request](https://github.com/manaflow-ai/cmux/pulls) នៅ​លើ GitHub ឬ [អ៊ីមែល​មក​យើង](mailto:founders@manaflow.com?subject=cmux%20feature%20request)។
@@ -403,21 +399,6 @@ cmux ឥត​គិត​ថ្លៃ​និង open source ហើយ​ន�
   <img src="./docs/assets/wechat-community-qr.jpg" alt="កូដ QR WeChat សម្រាប់ចូលរួមសហគមន៍ cmux" width="240" />
 </p>
 
-## Founder's Edition
-
-cmux គឺឥតគិតថ្លៃ បើកប្រភពកូដ និងនឹងនៅតែជានិច្ច។ ប្រសិនបើអ្នកចង់គាំទ្រការអភិវឌ្ឍន៍ និងទទួលបានសិទ្ធិចូលប្រើមុនគេចំពោះអ្វីដែលនឹងមកដល់បន្ទាប់៖
-
-**[Get Founder's Edition](https://buy.stripe.com/3cI00j2Ld0it5OU33r5EY0q)**
-
-- **សំណើមុខងារ/ការជួសជុលកំហុសដែលត្រូវផ្តល់អាទិភាព**
-- **សិទ្ធិចូលប្រើមុនគេ៖ cmux AI ដែលផ្តល់ឱ្យអ្នកនូវបរិបទនៅលើគ្រប់ workspace, tab និង panel**
-- **សិទ្ធិចូលប្រើមុនគេ៖ កម្មវិធី iOS ដែលមាន terminals បានធ្វើសមកាលកម្មរវាងកុំព្យូទ័រ និងទូរស័ព្ទ**
-- **សិទ្ធិចូលប្រើមុនគេ៖ Cloud VMs**
-- **សិទ្ធិចូលប្រើមុនគេ៖ របៀបសំឡេង (Voice mode)**
-- **iMessage/WhatsApp ផ្ទាល់ខ្លួនរបស់ខ្ញុំ**
-
 ## អាជ្ញាបណ្ណ
 
 cmux គឺបើកប្រភពកូដក្រោម [GPL-3.0-or-later](LICENSE)។
-
-ប្រសិនបើស្ថាប័នរបស់អ្នកមិនអាចអនុលោមតាម GPL បាន អាជ្ញាបណ្ណពាណិជ្ជកម្មមានផ្តល់ជូន។ សូមទាក់ទង [founders@manaflow.com](mailto:founders@manaflow.com) សម្រាប់ព័ត៌មានលម្អិត។

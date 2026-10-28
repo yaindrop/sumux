@@ -384,10 +384,6 @@ tmux es un multiplexor de terminal que se ejecuta dentro de cualquier terminal. 
 
 Sí, cmux es de uso gratuito. El código fuente está disponible en [GitHub](https://github.com/manaflow-ai/cmux).
 
-### ¿Cómo puedo apoyar a cmux?
-
-cmux es gratuito y de código abierto, y siempre lo será. Si quieres respaldar el desarrollo y obtener acceso anticipado a lo que viene, incluidos cmux AI, la app de iOS y las Cloud VMs, echa un vistazo a [cmux Founders Edition](https://github.com/manaflow-ai/cmux#founders-edition).
-
 ### ¿Tengo una solicitud de función o encontré un error?
 
 Queremos saberlo. Abre una [issue](https://github.com/manaflow-ai/cmux/issues) o un [pull request](https://github.com/manaflow-ai/cmux/pulls) en GitHub, o [escríbenos por correo](mailto:founders@manaflow.com?subject=cmux%20feature%20request).
@@ -426,21 +422,6 @@ Formas de participar:
   <img src="./docs/assets/wechat-community-qr.jpg" alt="Código QR de WeChat para unirte a la comunidad de cmux" width="240" />
 </p>
 
-## Founder's Edition
-
-cmux es gratuito, de código abierto, y siempre lo será. Si deseas apoyar el desarrollo y obtener acceso anticipado a lo que viene:
-
-**[Obtener Founder's Edition](https://buy.stripe.com/3cI00j2Ld0it5OU33r5EY0q)**
-
-- **Solicitudes de funciones/corrección de errores priorizadas**
-- **Acceso anticipado: cmux AI que te da contexto sobre cada espacio de trabajo, pestaña y panel**
-- **Acceso anticipado: app de iOS con terminales sincronizadas entre escritorio y teléfono**
-- **Acceso anticipado: VMs en la nube**
-- **Acceso anticipado: Modo de voz**
-- **Mi iMessage/WhatsApp personal**
-
 ## Licencia
 
 cmux es código abierto bajo [GPL-3.0-or-later](LICENSE).
-
-Si su organización no puede cumplir con GPL, hay una licencia comercial disponible. Contacte a [founders@manaflow.com](mailto:founders@manaflow.com) para más detalles.

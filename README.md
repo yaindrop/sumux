@@ -331,7 +331,7 @@ macOS only, for now. cmux is a native Swift + AppKit app.
 
 ### Is there an iOS app?
 
-Yes, in beta. Pair your iPhone with your Mac from the Mobile Connect window and attach to your terminals from your phone, with optional forwarding of terminal notifications. It ships on TestFlight as cmux BETA. Early access is included with [cmux Founders Edition](https://github.com/manaflow-ai/cmux#founders-edition). See the [iOS docs](https://cmux.com/docs/ios).
+Yes, in beta. Pair your iPhone with your Mac from the Mobile Connect window and attach to your terminals from your phone, with optional forwarding of terminal notifications. It ships on TestFlight as cmux BETA. See the [iOS docs](https://cmux.com/docs/ios).
 
 ### What coding agents does cmux work with?
 
@@ -381,10 +381,6 @@ tmux is a terminal multiplexer that runs inside any terminal. cmux is a native m
 
 Yes, cmux is free to use. The source code is available on [GitHub](https://github.com/manaflow-ai/cmux).
 
-### How can I support cmux?
-
-cmux is free and open source, and always will be. If you want to back development and get early access to what's next, including cmux AI, the iOS app, and Cloud VMs, check out [cmux Founders Edition](https://github.com/manaflow-ai/cmux#founders-edition).
-
 ### I have a feature request or found a bug?
 
 We want to hear it. Open an [issue](https://github.com/manaflow-ai/cmux/issues) or [pull request](https://github.com/manaflow-ai/cmux/pulls) on GitHub, or [email us](mailto:founders@manaflow.com?subject=cmux%20feature%20request).
@@ -423,25 +419,8 @@ Ways to get involved:
   <img src="./docs/assets/wechat-community-qr.jpg" alt="WeChat QR code to join the cmux community" width="240" />
 </p>
 
-## Founder's Edition
-
-cmux is free, open source, and always will be. If you'd like to support development and get early access to what's coming next:
-
-**[Get Founder's Edition](https://buy.stripe.com/3cI00j2Ld0it5OU33r5EY0q)**
-
-- **Prioritized feature requests/bug fixes**
-- **Early access: cmux AI that gives you context on every workspace, tab and panel**
-- **Early access: iOS app with terminals synced between desktop and phone**
-- **Early access: Cloud VMs**
-- **Early access: Voice mode**
-- **My personal iMessage/WhatsApp**
-
 ## License
 
-cmux is open source under [GPL-3.0-or-later](LICENSE).
-
-If your organization cannot comply with GPL, commercial terms may be available
-for portions for which Manaflow controls the necessary rights. They do not
-relicense third-party material or outside contributions for which Manaflow
-lacks a separate grant. See [LICENSE](LICENSE) for the exact scope and contact
-[founders@manaflow.com](mailto:founders@manaflow.com) for details.
+This fork is GPL-only under [GPL-3.0-or-later](LICENSE). The Business Source
+License server directories are not included, and the paid Founder's Edition
+checkout is not part of this fork.

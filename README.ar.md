@@ -361,10 +361,6 @@ tmux هو مُضاعِف طرفية يعمل داخل أي طرفية. أما cm
 
 نعم، cmux مجاني الاستخدام. الكود المصدري متاح على [GitHub](https://github.com/manaflow-ai/cmux).
 
-### كيف يمكنني دعم cmux؟
-
-cmux مجاني ومفتوح المصدر، وسيظل كذلك دائمًا. إذا كنت ترغب في دعم التطوير والحصول على وصول مبكر لما هو قادم، بما في ذلك cmux AI وتطبيق iOS وCloud VMs، فاطّلع على [cmux Founders Edition](https://github.com/manaflow-ai/cmux#founders-edition).
-
 ### لدي طلب ميزة أو وجدت خطأ؟
 
 نريد أن نسمعه. افتح [issue](https://github.com/manaflow-ai/cmux/issues) أو [pull request](https://github.com/manaflow-ai/cmux/pulls) على GitHub، أو [راسلنا عبر البريد الإلكتروني](mailto:founders@manaflow.com?subject=cmux%20feature%20request).
@@ -403,21 +399,6 @@ cmux مجاني ومفتوح المصدر، وسيظل كذلك دائمًا. إ
   <img src="./docs/assets/wechat-community-qr.jpg" alt="رمز QR على WeChat للانضمام إلى مجتمع cmux" width="240" />
 </p>
 
-## إصدار المؤسسين
-
-cmux مجاني ومفتوح المصدر وسيظل كذلك دائمًا. إذا كنت ترغب في دعم التطوير والحصول على وصول مبكر لما هو قادم:
-
-**[احصل على إصدار المؤسسين](https://buy.stripe.com/3cI00j2Ld0it5OU33r5EY0q)**
-
-- **أولوية لطلبات الميزات/إصلاح الأخطاء**
-- **وصول مبكر: ذكاء اصطناعي لـ cmux يمنحك سياقًا عن كل مساحة عمل وعلامة تبويب ولوحة**
-- **وصول مبكر: تطبيق iOS مع مزامنة الطرفيات بين سطح المكتب والهاتف**
-- **وصول مبكر: أجهزة افتراضية سحابية**
-- **وصول مبكر: وضع الصوت**
-- **iMessage/WhatsApp الشخصي الخاص بي**
-
 ## الرخصة
 
 cmux مفتوح المصدر بموجب [GPL-3.0-or-later](LICENSE).
-
-إذا لم تستطع مؤسستك الامتثال لـ GPL، فهناك ترخيص تجاري متاح. تواصل مع [founders@manaflow.com](mailto:founders@manaflow.com) للتفاصيل.

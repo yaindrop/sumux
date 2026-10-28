@@ -70,4 +70,4 @@ Full list of settings, defaults, and descriptions: `cmux-settings list-supported
 - Do not blindly overwrite `actions`, `ui`, `commands`, `vault`, or `rightSidebar`; they share the file and hold hand-tuned non-settings config.
 - Shortcut action ids must match the schema enum. Look them up before binding.
 - Colors are `#RRGGBB`; opacities are `0..1`.
-- Translate app-level phrasing ("Settings > Notifications > Dock badge") to the JSON path first; `web/app/[locale]/(landing)/docs/configuration/page.tsx` mirrors the schema 1:1.
+- Translate app-level phrasing ("Settings > Notifications > Dock badge") to the JSON path first. `schema/cmux.schema.json` is the settings schema.

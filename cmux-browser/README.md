@@ -71,9 +71,7 @@ The exact private source object and imported blob identities are recorded in
 
 This import does not change cmux's root license. Browser code for which
 Manaflow controls the necessary rights is available under
-GPL-3.0-or-later. Manaflow may separately offer commercial terms only for
-those rights-controlled portions. This is not a blanket dual-license claim
-over the Browser binary or every file in this directory.
+GPL-3.0-or-later.
 
 Third-party and derived files retain their original licenses. In particular,
 Chromium-derived material is BSD-3-Clause, Helium-derived material and uBlock
