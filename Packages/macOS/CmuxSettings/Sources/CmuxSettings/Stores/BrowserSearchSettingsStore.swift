@@ -29,7 +29,7 @@ public struct BrowserSearchSettingsStore: BrowserSearchSettingsReading {
     public static let defaultCustomSearchEngineURLTemplate = "https://www.google.com/search?q={query}"
 
     /// Legacy default search suggestions toggle value.
-    public static let defaultSearchSuggestionsEnabled: Bool = true
+    public static let defaultSearchSuggestionsEnabled: Bool = false
 
     // UserDefaults is documented thread-safe and the reference is immutable.
     private nonisolated(unsafe) let defaults: UserDefaults

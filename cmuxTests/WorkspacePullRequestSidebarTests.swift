@@ -785,10 +785,11 @@ final class WorkspacePullRequestSidebarTests: XCTestCase {
 
         defaults.set(true, forKey: SidebarWorkspaceDetailDefaults.watchGitStatusKey)
         defaults.removeObject(forKey: SidebarWorkspaceDetailDefaults.showPullRequestsKey)
-        XCTAssertTrue(
+        XCTAssertFalse(
             SidebarWorkspaceDetailDefaults.showPullRequestsValue(defaults: defaults),
-            "PR badges should be enabled by default so this covers the stale badge users see."
+            "PR badges stay off unless the sidebar setting is on, so GitHub is not polled by default."
         )
+        defaults.set(true, forKey: SidebarWorkspaceDetailDefaults.showPullRequestsKey)
 
         let manager = TabManager()
         let workspace = try XCTUnwrap(manager.selectedWorkspace)
