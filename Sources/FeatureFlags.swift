@@ -34,7 +34,11 @@ struct CmuxFeatureFlagDefinition: Identifiable, Equatable, Sendable {
 @MainActor
 @Observable
 final class CmuxFeatureFlags {
-    static let shared = CmuxFeatureFlags(publishesOffMainSnapshot: true)
+    /// This fork does not poll `cmux.com/api/client-config`. A cached remote value cannot change a flag.
+    static let shared = CmuxFeatureFlags(
+        remoteControlEnabled: false,
+        publishesOffMainSnapshot: true
+    )
 
     #if DEBUG
     private static let proUpgradeUIDefault = true
@@ -304,6 +308,8 @@ final class CmuxFeatureFlags {
     @ObservationIgnored
     private let publishesOffMainSnapshot: Bool
     @ObservationIgnored
+    private let remoteControlEnabled: Bool
+    @ObservationIgnored
     private let defaults: UserDefaults
     @ObservationIgnored
     private let remoteFlagValueProvider: (String) -> Any?
@@ -321,14 +327,18 @@ final class CmuxFeatureFlags {
     init(
         defaults: UserDefaults = .standard,
         telemetryEnabled: Bool = TelemetrySettings.enabledForCurrentLaunch,
+        remoteControlEnabled: Bool = true,
         remoteFlagValueProvider: @escaping (String) -> Any? = { PostHogSDK.shared.getFeatureFlag($0) },
         remoteFlagLoader: (@Sendable () async -> [String: Bool]?)? = nil,
         publishesOffMainSnapshot: Bool = false
     ) {
         self.defaults = defaults
         self.publishesOffMainSnapshot = publishesOffMainSnapshot
+        self.remoteControlEnabled = remoteControlEnabled
         self.remoteFlagValueProvider = remoteFlagValueProvider
-        if let remoteFlagLoader {
+        if !remoteControlEnabled {
+            self.remoteFlagLoader = { nil }
+        } else if let remoteFlagLoader {
             self.remoteFlagLoader = remoteFlagLoader
         } else {
             let target = Self.releaseControlTarget(
@@ -347,12 +357,18 @@ final class CmuxFeatureFlags {
                 values[definition.key] = value
             }
         }
-        remoteValuesByKey = Self.allFlags.reduce(into: [:]) { values, definition in
-            if let value = Self.storedBoolValue(
-                forKey: Self.remoteCacheKey(for: definition.key),
-                defaults: defaults
-            ) {
-                values[definition.key] = value
+        if remoteControlEnabled {
+            remoteValuesByKey = Self.allFlags.reduce(into: [:]) { values, definition in
+                if let value = Self.storedBoolValue(
+                    forKey: Self.remoteCacheKey(for: definition.key),
+                    defaults: defaults
+                ) {
+                    values[definition.key] = value
+                }
+            }
+        } else {
+            for definition in Self.allFlags {
+                defaults.removeObject(forKey: Self.remoteCacheKey(for: definition.key))
             }
         }
         recomputeEffectiveValues()
@@ -363,6 +379,7 @@ final class CmuxFeatureFlags {
     /// enabled. Opted-out launches use one product-wide ID without targeting
     /// properties, preserving a non-identifying emergency kill switch.
     func start() {
+        guard remoteControlEnabled else { return }
         guard refreshTimer == nil else { return }
         refreshRemoteFlags()
         refreshTimer = Timer.scheduledTimer(withTimeInterval: 5 * 60, repeats: true) { [weak self] _ in
@@ -598,6 +615,7 @@ final class CmuxFeatureFlags {
     }
 
     func applyLoadedFlags() {
+        guard remoteControlEnabled else { return }
         let previousResolutions = resolutionsByKey
         for definition in Self.allFlags {
             if let value = Self.coerceBoolFlagValue(remoteFlagValueProvider(definition.key)) {
