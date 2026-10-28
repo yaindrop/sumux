@@ -492,7 +492,7 @@
         },
         "sendAnonymousTelemetry": {
           "type": "boolean",
-          "default": true,
+          "default": false,
           "description": "Allow anonymous telemetry."
         },
         "confirmQuit": {
