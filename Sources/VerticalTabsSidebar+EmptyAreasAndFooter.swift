@@ -367,22 +367,6 @@ private struct SidebarAccountPopover: View {
                 }
                 .accessibilityIdentifier("SidebarAccountSignInButton")
             }
-            if accountFlow?.isProUpgradeAvailable == true {
-                if accountFlow?.currentIdentity == nil {
-                    Divider()
-                }
-                Button {
-                    dismiss()
-                    accountFlow?.openProUpgrade()
-                } label: {
-                    Label(
-                        String(localized: "menu.help.upgradeToPro", defaultValue: "Upgrade to cmux Pro…"),
-                        systemImage: "sparkles"
-                    )
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .accessibilityIdentifier("SidebarAccountUpgradeButton")
-            }
             if accountFlow?.currentIdentity != nil {
                 Button {
                     dismiss()

@@ -14704,7 +14704,6 @@ struct SidebarFooterButtons: View {
 }
 
 private enum SidebarHelpMenuAction {
-    case upgrade
     case importBrowserData
     case keyboardShortcuts
     case docs
@@ -14789,15 +14788,6 @@ private struct SidebarHelpMenuButton: View {
                 accessibilityIdentifier: "SidebarHelpMenuOptionWelcome",
                 isExternalLink: false
             )
-            if CmuxFeatureFlags.shared.isProUpgradeUIEnabled {
-                helpOptionButton(
-                    title: String(localized: "menu.help.upgradeToPro", defaultValue: "Upgrade to cmux Pro…"),
-                    action: .upgrade,
-                    accessibilityIdentifier: "SidebarHelpMenuOptionUpgrade",
-                    isExternalLink: false,
-                    trailingSystemImage: "sparkles"
-                )
-            }
             helpOptionButton(
                 title: String(localized: "sidebar.help.sendFeedback", defaultValue: "Send Feedback"),
                 action: .sendFeedback,
@@ -14919,8 +14909,6 @@ private struct SidebarHelpMenuButton: View {
 
     private func perform(_ action: SidebarHelpMenuAction) {
         switch action {
-        case .upgrade:
-            ProUpgradePresenter.present()
         case .importBrowserData:
             isPopoverPresented = false
             DispatchQueue.main.async {

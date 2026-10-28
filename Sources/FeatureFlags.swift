@@ -249,9 +249,8 @@ final class CmuxFeatureFlags {
         ]
     }()
 
-    var isProUpgradeUIEnabled: Bool {
-        effectiveValue(for: Self.allFlags[0])
-    }
+    /// The paid upgrade flow is removed from this fork. Remote flags cannot turn it back on.
+    var isProUpgradeUIEnabled: Bool { false }
 
     var isMobileConnectButtonEnabled: Bool {
         effectiveValue(for: Self.allFlags[1])
