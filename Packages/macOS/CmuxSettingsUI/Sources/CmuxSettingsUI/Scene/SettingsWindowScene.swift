@@ -67,13 +67,12 @@ public struct SettingsWindowRoot: View {
     private var secretStore: SecretFileStore { runtime.secretStore }
     private var catalog: SettingCatalog { runtime.catalog }
     private var hostActions: SettingsHostActions { runtime.hostActions }
-    private var accountFlow: AccountFlow? { runtime.accountFlow }
 
     /// Resolves the selected section pane from the persisted raw value,
     /// defaulting to ``SettingsSectionID/account`` when the stored value
     /// is unrecognized (e.g., after dropping a case).
     private var selectedSection: SettingsSectionID {
-        SettingsSectionID(rawValue: selectedSectionRaw) ?? .account
+        SettingsSectionID.shown(SettingsSectionID(rawValue: selectedSectionRaw) ?? .app)
     }
 
     /// Whether the user currently has a non-empty search query. When
@@ -274,6 +273,7 @@ public struct SettingsWindowRoot: View {
     /// sidebar row stays put while the detail pane snaps to the
     /// section.
     private func navigate(to target: SettingsSectionID, preferSectionSelection: Bool = true) {
+        let target = SettingsSectionID.shown(target)
         if selectedSectionRaw != target.rawValue { selectedSectionRaw = target.rawValue }
         if preferSectionSelection {
             let sectionEntry = sectionEntryID(for: target)
@@ -294,12 +294,12 @@ public struct SettingsWindowRoot: View {
     private func parentSection(for entryID: String) -> SettingsSectionID {
         if entryID.hasPrefix("section:") {
             let raw = String(entryID.dropFirst("section:".count))
-            return SettingsSectionID(rawValue: raw) ?? .account
+            return SettingsSectionID.shown(SettingsSectionID(rawValue: raw) ?? .app)
         }
         if let entry = searchIndex.entries.first(where: { $0.id == entryID }) {
-            if case .setting(let parent) = entry.kind { return parent }
+            if case .setting(let parent) = entry.kind { return SettingsSectionID.shown(parent) }
         }
-        return .account
+        return .app
     }
 
     @ViewBuilder
@@ -371,8 +371,9 @@ public struct SettingsWindowRoot: View {
     private func applyScrollNavigation(_ notification: Notification, proxy: ScrollViewProxy) {
         guard
             let rawValue = notification.userInfo?["target"] as? String,
-            let target = SettingsSectionID(rawValue: rawValue)
+            let parsed = SettingsSectionID(rawValue: rawValue)
         else { return }
+        let target = SettingsSectionID.shown(parsed)
         let anchorID = (notification.userInfo?["anchor"] as? String) ?? self.anchorID(for: target)
         let shouldHighlight = (notification.userInfo?["highlight"] as? Bool) ?? false
         let sectionID = self.anchorID(for: target)
@@ -417,13 +418,6 @@ public struct SettingsWindowRoot: View {
         // Account, App, Terminal, TextBox, Mobile, Sidebar, Beta Features,
         // Automation, Browser (with embedded Import), Global Hotkey,
         // Keyboard Shortcuts, Workspace Colors, cmux.json, Reset.
-        AccountSection(
-            defaultsStore: defaultsStore,
-            catalog: catalog,
-            accountFlow: accountFlow
-        )
-        .id(anchorID(for: .account))
-
         AppSection(
             defaultsStore: defaultsStore,
             catalog: catalog,
@@ -444,12 +438,6 @@ public struct SettingsWindowRoot: View {
 
         SleepyModeSection(hostActions: hostActions, store: hostActions.sleepyModeStore())
             .id(anchorID(for: .sleepyMode))
-
-        MobileSection(defaultsStore: defaultsStore, catalog: catalog, hostActions: hostActions)
-            .id(anchorID(for: .mobile))
-
-        IrohNetworkingSection(hostActions: hostActions)
-            .id(anchorID(for: .networking))
 
         SidebarSection(defaultsStore: defaultsStore, catalog: catalog, hostActions: hostActions)
             .id(anchorID(for: .sidebarAppearance))

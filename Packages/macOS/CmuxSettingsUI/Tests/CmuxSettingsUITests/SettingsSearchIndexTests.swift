@@ -61,7 +61,7 @@ struct SettingsSearchIndexTests {
         let sectionCount = result.filter {
             if case .section = $0.kind { return true } else { return false }
         }.count
-        #expect(sectionCount == SettingsSectionID.allCases.count)
+        #expect(sectionCount == SettingsSectionID.visibleCases.count)
     }
 
     @Test func tokenizedQueryFiltersBothSectionsAndSettings() {

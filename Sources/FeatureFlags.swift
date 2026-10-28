@@ -252,21 +252,18 @@ final class CmuxFeatureFlags {
     /// The paid upgrade flow is removed from this fork. Remote flags cannot turn it back on.
     var isProUpgradeUIEnabled: Bool { false }
 
-    var isMobileConnectButtonEnabled: Bool {
-        effectiveValue(for: Self.allFlags[1])
-    }
+    /// Phone pairing is removed from this fork. Remote flags cannot turn it back on.
+    var isMobileConnectButtonEnabled: Bool { false }
 
-    var isCloudVMUIEnabled: Bool {
-        effectiveValue(for: Self.allFlags[3])
-    }
+    /// Cloud VMs are removed from this fork. Remote flags cannot turn them back on.
+    var isCloudVMUIEnabled: Bool { false }
 
     var isAgentChatUIEnabled: Bool {
         effectiveValue(for: Self.allFlags[4])
     }
 
-    var isSidebarAccountButtonEnabled: Bool {
-        effectiveValue(for: Self.allFlags[2])
-    }
+    /// The cmux cloud account button is removed from this fork. Remote flags cannot turn it back on.
+    var isSidebarAccountButtonEnabled: Bool { false }
 
     var isSidebarWorkspaceAgentSpinnerEnabled: Bool {
         effectiveValue(for: Self.allFlags[5])

@@ -35,27 +35,38 @@ public enum SettingsSectionID: String, CaseIterable, Identifiable, Sendable, Has
 
     public var id: Self { self }
 
+    /// Account, phone pairing, and cmux relay networking are removed from this fork.
+    public static let removedInThisFork: Set<SettingsSectionID> = [.account, .mobile, .networking]
+
+    public static var visibleCases: [SettingsSectionID] {
+        allCases.filter { !removedInThisFork.contains($0) }
+    }
+
+    public static func shown(_ section: SettingsSectionID) -> SettingsSectionID {
+        removedInThisFork.contains(section) ? .app : section
+    }
+
     /// User-facing section title shown in the sidebar.
     public var title: String {
         switch self {
-        case .account: return "Account"
-        case .app: return "App"
-        case .terminal: return "Terminal"
+        case .account: return String(localized: "settings.section.account", defaultValue: "Account")
+        case .app: return String(localized: "settings.section.app", defaultValue: "App")
+        case .terminal: return String(localized: "settings.section.terminal", defaultValue: "Terminal")
         case .textBox: return String(localized: "settings.section.textBox", defaultValue: "TextBox (Beta)")
         case .sleepyMode: return String(localized: "settings.section.sleepyMode", defaultValue: "Sleepy Mode")
         case .mobile: return String(localized: "settings.section.mobile", defaultValue: "Mobile")
         case .networking: return String(localized: "settings.section.networking", defaultValue: "Networking")
-        case .sidebarAppearance: return "Sidebar"
+        case .sidebarAppearance: return String(localized: "settings.section.sidebarAppearance", defaultValue: "Sidebar")
         case .customSidebars: return String(localized: "settings.section.customSidebars", defaultValue: "Custom Sidebars")
-        case .betaFeatures: return "Beta Features"
-        case .automation: return "Automation"
-        case .browser: return "Browser"
-        case .browserImport: return "Import Browser Data"
-        case .globalHotkey: return "Global Hotkey"
-        case .keyboardShortcuts: return "Keyboard Shortcuts"
-        case .workspaceColors: return "Workspace Colors"
-        case .settingsJSON: return "cmux.json"
-        case .reset: return "Reset"
+        case .betaFeatures: return String(localized: "settings.section.betaFeatures", defaultValue: "Beta Features")
+        case .automation: return String(localized: "settings.section.automation", defaultValue: "Automation")
+        case .browser: return String(localized: "settings.section.browser", defaultValue: "Browser")
+        case .browserImport: return String(localized: "settings.browser.import", defaultValue: "Import Browser Data")
+        case .globalHotkey: return String(localized: "settings.section.globalHotkey", defaultValue: "Global Hotkey")
+        case .keyboardShortcuts: return String(localized: "settings.section.keyboardShortcuts", defaultValue: "Keyboard Shortcuts")
+        case .workspaceColors: return String(localized: "settings.section.workspaceColors", defaultValue: "Workspace Colors")
+        case .settingsJSON: return String(localized: "settings.section.settingsJSON", defaultValue: "cmux.json")
+        case .reset: return String(localized: "settings.section.reset", defaultValue: "Reset")
         }
     }
 

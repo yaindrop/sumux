@@ -105,20 +105,12 @@ final class HostAccountFlow: AccountFlow, AccountSignInFlow {
         }
     }
 
-    func startSignIn() {
-        browserSignIn.beginSignIn()
-    }
+    func startSignIn() {}
 
-    func startSignInForPane() -> URL? {
-        browserSignIn.beginSignIn()
-        return browserSignIn.activeAttemptSignInURL
-    }
+    func startSignInForPane() -> URL? { nil }
 
-    /// Runs the same hosted Stack sign-in used by every UI entrypoint, while
-    /// allowing socket callers to await a bounded result.
-    func signIn(timeout: TimeInterval) async -> Bool {
-        await browserSignIn.signIn(timeout: timeout)
-    }
+    /// Cloud account sign-in is removed from this fork.
+    func signIn(timeout _: TimeInterval) async -> Bool { false }
 
     /// Issues the manual hosted Stack sign-in URL through the same callback
     /// state owner as interactive sign-in.
@@ -128,7 +120,8 @@ final class HostAccountFlow: AccountFlow, AccountSignInFlow {
 
     /// Completes an external hosted Stack callback through the shared attempt.
     func handleCallbackURL(_ url: URL) async -> Bool {
-        await browserSignIn.handleCallbackURL(url)
+        _ = url
+        return false
     }
 
     func openSignInInDefaultBrowser() {
@@ -167,48 +160,15 @@ final class HostAccountFlow: AccountFlow, AccountSignInFlow {
     }
 
     func refreshBillingPlan() async {
-        guard coordinator.currentUser != nil else {
-            isProActive = false
-            canManageBilling = false
-            return
-        }
-        var request = URLRequest(url: AuthEnvironment.apiBaseURL.appendingPathComponent("api/billing/plan"))
-        request.httpMethod = "GET"
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-
-        if let tokens = try? await coordinator.currentTokens() {
-            request.setValue("Bearer \(tokens.accessToken)", forHTTPHeaderField: "Authorization")
-            request.setValue(tokens.refreshToken, forHTTPHeaderField: "X-Stack-Refresh-Token")
-        }
-
-        do {
-            let (data, response) = try await URLSession.shared.data(for: request)
-            guard let http = response as? HTTPURLResponse,
-                  (200..<300).contains(http.statusCode) else {
-                isProActive = false
-                canManageBilling = false
-                return
-            }
-            let decoded = try JSONDecoder().decode(BillingPlanResponse.self, from: data)
-            isProActive = decoded.isPro
-            canManageBilling = decoded.billingManagement == .stripe
-        } catch {
-            isProActive = false
-            canManageBilling = false
-        }
+        isProActive = false
+        canManageBilling = false
     }
 
-    func openProUpgrade() {
-        ProUpgradePresenter.present()
-    }
+    func openProUpgrade() {}
 
-    func prefetchProUpgrade() {
-        ProUpgradePresenter.prefetch()
-    }
+    func prefetchProUpgrade() {}
 
-    func openBillingPortal() {
-        ProUpgradePresenter.presentBillingPortal()
-    }
+    func openBillingPortal() {}
 
     private static func identity(from user: CMUXAuthUser?) -> AccountIdentity? {
         guard let user else { return nil }
@@ -219,15 +179,4 @@ final class HostAccountFlow: AccountFlow, AccountSignInFlow {
             avatarURL: user.profileImageURL.flatMap(URL.init(string:))
         )
     }
-}
-
-private struct BillingPlanResponse: Decodable {
-    let isPro: Bool
-    let billingManagement: BillingManagement?
-}
-
-private enum BillingManagement: String, Decodable {
-    case stripe
-    case external
-    case none
 }

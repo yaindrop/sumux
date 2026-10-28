@@ -3442,6 +3442,14 @@ struct CMUXCLI {
         }
         let commandArgs = presentationOptions.remaining
 
+        if [
+            "auth", "login", "logout",
+            "vm", "cloud", "vm-pty-connect", "vm-pty-attach", "vm-ssh-attach",
+            "remotes", "remote", "remote-daemon-status", "ai-accounts",
+        ].contains(command) {
+            throw CLIError(message: "Cloud services are disabled in this build.")
+        }
+
         if command == "version" {
             print(versionSummary())
             return

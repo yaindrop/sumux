@@ -11,28 +11,8 @@ extension ContentView {
             { _ in value }
         }
 
-        return [
-            CommandPaletteCommandContribution(
-                commandId: commandPaletteAuthSignInCommandId,
-                title: constant(String(localized: "command.auth.signIn.title", defaultValue: "Sign In")),
-                subtitle: constant(String(localized: "command.auth.subtitle", defaultValue: "Account")),
-                keywords: ["account", "auth", "authenticate", "authentication", "login", "log in", "signin", "sign in"],
-                when: { context in
-                    !context.bool(CommandPaletteContextKeys.authSignedIn)
-                        && !context.bool(CommandPaletteContextKeys.authWorking)
-                }
-            ),
-            CommandPaletteCommandContribution(
-                commandId: commandPaletteAuthSignOutCommandId,
-                title: constant(String(localized: "command.auth.signOut.title", defaultValue: "Sign Out")),
-                subtitle: constant(String(localized: "command.auth.subtitle", defaultValue: "Account")),
-                keywords: ["account", "auth", "logout", "log out", "signout", "sign out"],
-                when: { context in
-                    context.bool(CommandPaletteContextKeys.authSignedIn)
-                        && !context.bool(CommandPaletteContextKeys.authWorking)
-                }
-            ),
-        ]
+        _ = constant
+        return []
     }
 
     func registerAuthCommandHandlers(_ registry: inout CommandPaletteHandlerRegistry) {
