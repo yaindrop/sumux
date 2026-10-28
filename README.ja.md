@@ -1,6 +1,7 @@
 > この翻訳は Claude によって生成されました。改善の提案がある場合は、PR を作成してください。
 
-<h1 align="center">cmux</h1>
+<h1 align="center">素幕</h1>
+<p align="center">sumux</p>
 <p align="center">AIコーディングエージェント向けの縦タブと通知機能を備えたGhosttyベースのmacOSターミナル</p>
 
 <p align="center">

@@ -7,115 +7,115 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "bs": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "素幕"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "素幕"
           }
         }
       }
@@ -95602,115 +95602,115 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "إنهاء cmux؟"
+            "value": "إنهاء sumux؟"
           }
         },
         "bs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zatvoriti cmux?"
+            "value": "Zatvoriti sumux?"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Afslut cmux?"
+            "value": "Afslut sumux?"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux beenden?"
+            "value": "sumux beenden?"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quit cmux?"
+            "value": "Quit sumux?"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "¿Salir de cmux?"
+            "value": "¿Salir de sumux?"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quitter cmux ?"
+            "value": "Quitter sumux ?"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uscire da cmux?"
+            "value": "Uscire da sumux?"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux を終了しますか？"
+            "value": "sumux を終了しますか？"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux를 종료하시겠습니까?"
+            "value": "sumux를 종료하시겠습니까?"
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Avslutte cmux?"
+            "value": "Avslutte sumux?"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zakończyć cmux?"
+            "value": "Zakończyć sumux?"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Encerrar o cmux?"
+            "value": "Encerrar o sumux?"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Завершить cmux?"
+            "value": "Завершить sumux?"
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "ออกจาก cmux หรือไม่?"
+            "value": "ออกจาก sumux หรือไม่?"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux'tan çıkılsın mı?"
+            "value": "sumux'tan çıkılsın mı?"
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Завершити cmux?"
+            "value": "Завершити sumux?"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "退出 cmux？"
+            "value": "退出素幕？"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "要結束 cmux 嗎？"
+            "value": "要結束素幕嗎？"
           }
         }
       }
@@ -126277,115 +126277,115 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "حول cmux"
+            "value": "حول sumux"
           }
         },
         "bs": {
           "stringUnit": {
             "state": "translated",
-            "value": "O programu cmux"
+            "value": "O programu sumux"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Om cmux"
+            "value": "Om sumux"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Über cmux"
+            "value": "Über sumux"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "About cmux"
+            "value": "About sumux"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Acerca de cmux"
+            "value": "Acerca de sumux"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "À propos de cmux"
+            "value": "À propos de sumux"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Informazioni su cmux"
+            "value": "Informazioni su sumux"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmuxについて"
+            "value": "sumuxについて"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux에 관하여"
+            "value": "sumux에 관하여"
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Om cmux"
+            "value": "Om sumux"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "O cmux"
+            "value": "O sumux"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sobre o cmux"
+            "value": "Sobre o sumux"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "О программе cmux"
+            "value": "О программе sumux"
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "เกี่ยวกับ cmux"
+            "value": "เกี่ยวกับ sumux"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux Hakkında"
+            "value": "sumux Hakkında"
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Про cmux"
+            "value": "Про sumux"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "关于 cmux"
+            "value": "关于素幕"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "關於 cmux"
+            "value": "關於素幕"
           }
         }
       }
@@ -126634,19 +126634,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Make cmux the Default Terminal"
+            "value": "Make sumux the Default Terminal"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux をデフォルトターミナルにする"
+            "value": "sumux をデフォルトターミナルにする"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "将 cmux 设为默认终端"
+            "value": "将素幕设为默认终端"
           }
         }
       }
@@ -137441,115 +137441,115 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "إنهاء cmux"
+            "value": "إنهاء sumux"
           }
         },
         "bs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zatvori cmux"
+            "value": "Zatvori sumux"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Afslut cmux"
+            "value": "Afslut sumux"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux beenden"
+            "value": "sumux beenden"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quit cmux"
+            "value": "Quit sumux"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Salir de cmux"
+            "value": "Salir de sumux"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quitter cmux"
+            "value": "Quitter sumux"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Esci da cmux"
+            "value": "Esci da sumux"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux を終了"
+            "value": "sumux を終了"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux 종료"
+            "value": "sumux 종료"
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Avslutt cmux"
+            "value": "Avslutt sumux"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zakończ cmux"
+            "value": "Zakończ sumux"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Encerrar o cmux"
+            "value": "Encerrar o sumux"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Завершить cmux"
+            "value": "Завершить sumux"
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "ออกจาก cmux"
+            "value": "ออกจาก sumux"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux'tan Çık"
+            "value": "sumux'tan Çık"
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Завершити cmux"
+            "value": "Завершити sumux"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "退出 cmux"
+            "value": "退出素幕"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "結束 cmux"
+            "value": "結束素幕"
           }
         }
       }
@@ -161868,115 +161868,115 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "يخفي أيقونة Dock وإدخال Cmd+Tab. استخدم عنصر شريط القائمة لإظهار cmux."
+            "value": "يخفي أيقونة Dock وإدخال Cmd+Tab. استخدم عنصر شريط القائمة لإظهار sumux."
           }
         },
         "bs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sakriva Dock ikonu i Cmd+Tab stavku. Koristi stavku trake menija za prikaz cmux-a."
+            "value": "Sakriva Dock ikonu i Cmd+Tab stavku. Koristi stavku trake menija za prikaz sumux-a."
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Skjul Dock-symbolet og Cmd+Tab-posten. Brug menulinjeelementet til at vise cmux."
+            "value": "Skjul Dock-symbolet og Cmd+Tab-posten. Brug menulinjeelementet til at vise sumux."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Blendet das Dock-Symbol und den Cmd+Tab-Eintrag aus. Verwende den Menüleisteneintrag, um cmux anzuzeigen."
+            "value": "Blendet das Dock-Symbol und den Cmd+Tab-Eintrag aus. Verwende den Menüleisteneintrag, um sumux anzuzeigen."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hide the Dock icon and Cmd+Tab entry. Use the menu bar item to show cmux."
+            "value": "Hide the Dock icon and Cmd+Tab entry. Use the menu bar item to show sumux."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Oculta el ícono del Dock y la entrada de Cmd+Tab. Usa el elemento de la barra de menús para mostrar cmux."
+            "value": "Oculta el ícono del Dock y la entrada de Cmd+Tab. Usa el elemento de la barra de menús para mostrar sumux."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Masque l’icône du Dock et l’entrée Cmd+Tab. Utilisez l’élément de barre des menus pour afficher cmux."
+            "value": "Masque l’icône du Dock et l’entrée Cmd+Tab. Utilisez l’élément de barre des menus pour afficher sumux."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nasconde l'icona del Dock e la voce Cmd+Tab. Usa l'elemento nella barra dei menu per mostrare cmux."
+            "value": "Nasconde l'icona del Dock e la voce Cmd+Tab. Usa l'elemento nella barra dei menu per mostrare sumux."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "DockアイコンとCmd+Tabの項目を非表示にします。cmuxを表示するにはメニューバー項目を使います。"
+            "value": "DockアイコンとCmd+Tabの項目を非表示にします。sumuxを表示するにはメニューバー項目を使います。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dock 아이콘과 Cmd+Tab 항목을 숨깁니다. 메뉴 막대 항목으로 cmux를 표시합니다."
+            "value": "Dock 아이콘과 Cmd+Tab 항목을 숨깁니다. 메뉴 막대 항목으로 sumux를 표시합니다."
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Skjuler Dock-symbolet og Cmd+Tab-oppføringen. Bruk menylinjeelementet for å vise cmux."
+            "value": "Skjuler Dock-symbolet og Cmd+Tab-oppføringen. Bruk menylinjeelementet for å vise sumux."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ukrywa ikonę Docka i pozycję Cmd+Tab. Użyj elementu na pasku menu, aby pokazać cmux."
+            "value": "Ukrywa ikonę Docka i pozycję Cmd+Tab. Użyj elementu na pasku menu, aby pokazać sumux."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Oculta o ícone no Dock e a entrada Cmd+Tab. Use o item da barra de menus para mostrar o cmux."
+            "value": "Oculta o ícone no Dock e a entrada Cmd+Tab. Use o item da barra de menus para mostrar o sumux."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Скрывает значок Dock и пункт Cmd+Tab. Используйте пункт строки меню, чтобы показать cmux."
+            "value": "Скрывает значок Dock и пункт Cmd+Tab. Используйте пункт строки меню, чтобы показать sumux."
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "ซ่อนไอคอน Dock และรายการ Cmd+Tab ใช้รายการในแถบเมนูเพื่อแสดง cmux"
+            "value": "ซ่อนไอคอน Dock และรายการ Cmd+Tab ใช้รายการในแถบเมนูเพื่อแสดง sumux"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dock simgesini ve Cmd+Tab girişini gizler. cmux'u göstermek için menü çubuğu öğesini kullan."
+            "value": "Dock simgesini ve Cmd+Tab girişini gizler. sumux'u göstermek için menü çubuğu öğesini kullan."
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Приховує іконку Dock і пункт Cmd+Tab. Використовуйте пункт рядка меню, щоб показати cmux."
+            "value": "Приховує іконку Dock і пункт Cmd+Tab. Використовуйте пункт рядка меню, щоб показати sumux."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "隐藏 Dock 图标和 Cmd+Tab 条目。使用菜单栏项目显示 cmux。"
+            "value": "隐藏 Dock 图标和 Cmd+Tab 条目。使用菜单栏项目显示素幕。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "隱藏 Dock 圖示和 Cmd+Tab 項目。使用選單列項目顯示 cmux。"
+            "value": "隱藏 Dock 圖示和 Cmd+Tab 項目。使用選單列項目顯示素幕。"
           }
         }
       }
@@ -175461,19 +175461,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mirrors a remote host's tmux sessions in the sidebar over ssh tmux -CC; sessions become workspaces and windows become tabs. Quitting cmux leaves the remote tmux server running."
+            "value": "Mirrors a remote host's tmux sessions in the sidebar over ssh tmux -CC; sessions become workspaces and windows become tabs. Quitting sumux leaves the remote tmux server running."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "ssh tmux -CC でリモートホストの tmux セッションをサイドバーにミラーリングします。セッションはワークスペースに、ウィンドウはタブになります。cmux を終了してもリモートの tmux サーバーは動作し続けます。"
+            "value": "ssh tmux -CC でリモートホストの tmux セッションをサイドバーにミラーリングします。セッションはワークスペースに、ウィンドウはタブになります。sumux を終了してもリモートの tmux サーバーは動作し続けます。"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "通过 ssh tmux -CC 在侧边栏中镜像远程主机的 tmux 会话；会话变为工作区，窗口变为标签页。退出 cmux 后，远程 tmux 服务器会继续运行。"
+            "value": "通过 ssh tmux -CC 在侧边栏中镜像远程主机的 tmux 会话；会话变为工作区，窗口变为标签页。退出素幕后，远程 tmux 服务器会继续运行。"
           }
         }
       }
@@ -182885,19 +182885,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "This is a generated preview of the effective config. No base Ghostty config file was found, so only cmux overrides are shown."
+            "value": "This is a generated preview of the effective config. No base Ghostty config file was found, so only sumux overrides are shown."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "これは実効設定の生成プレビューです。ベースの Ghostty 設定ファイルが見つからなかったため、cmux の上書き設定のみを表示しています。"
+            "value": "これは実効設定の生成プレビューです。ベースの Ghostty 設定ファイルが見つからなかったため、sumux の上書き設定のみを表示しています。"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "这是实际生效配置的生成预览。未找到基础 Ghostty 配置文件，因此只显示 cmux 的覆盖项。"
+            "value": "这是实际生效配置的生成预览。未找到基础 Ghostty 配置文件，因此只显示素幕的覆盖项。"
           }
         }
       }
@@ -182908,19 +182908,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "素幕"
           }
         }
       }
@@ -231863,31 +231863,31 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Welcome to cmux!"
+            "value": "Welcome to sumux!"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmuxへようこそ！"
+            "value": "sumuxへようこそ！"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux에 오신 것을 환영합니다!"
+            "value": "sumux에 오신 것을 환영합니다!"
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ласкаво просимо до cmux!"
+            "value": "Ласкаво просимо до sumux!"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "欢迎使用 cmux！"
+            "value": "欢迎使用素幕！"
           }
         }
       }
@@ -232997,19 +232997,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "素幕"
           }
         }
       }
@@ -245699,19 +245699,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "素幕"
           }
         }
       }
@@ -245883,19 +245883,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux mascot"
+            "value": "sumux mascot"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux マスコット"
+            "value": "sumux マスコット"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux 吉祥物"
+            "value": "素幕吉祥物"
           }
         }
       }
@@ -246550,19 +246550,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "sumux"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux"
+            "value": "素幕"
           }
         }
       }
@@ -246665,19 +246665,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Unlock cmux Sleepy Mode"
+            "value": "Unlock sumux Sleepy Mode"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux おやすみモードのロックを解除"
+            "value": "sumux おやすみモードのロックを解除"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "解锁 cmux 休眠模式"
+            "value": "解锁素幕休眠模式"
           }
         }
       }
@@ -251898,115 +251898,115 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "عرض cmux"
+            "value": "عرض sumux"
           }
         },
         "bs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prikaži cmux"
+            "value": "Prikaži sumux"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vis cmux"
+            "value": "Vis sumux"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux anzeigen"
+            "value": "sumux anzeigen"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Show cmux"
+            "value": "Show sumux"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mostrar cmux"
+            "value": "Mostrar sumux"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Afficher cmux"
+            "value": "Afficher sumux"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mostra cmux"
+            "value": "Mostra sumux"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmuxを表示"
+            "value": "sumuxを表示"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux 표시"
+            "value": "sumux 표시"
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vis cmux"
+            "value": "Vis sumux"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pokaż cmux"
+            "value": "Pokaż sumux"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mostrar cmux"
+            "value": "Mostrar sumux"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Показать cmux"
+            "value": "Показать sumux"
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "แสดง cmux"
+            "value": "แสดง sumux"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux'u Göster"
+            "value": "sumux'u Göster"
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Показати cmux"
+            "value": "Показати sumux"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "显示 cmux"
+            "value": "显示素幕"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "顯示 cmux"
+            "value": "顯示素幕"
           }
         }
       }
@@ -281144,19 +281144,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quit cmux"
+            "value": "Quit sumux"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quit cmux"
+            "value": "Quit sumux"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "退出 cmux"
+            "value": "退出素幕"
           }
         }
       }

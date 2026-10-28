@@ -1,6 +1,7 @@
 > 此翻譯由 Claude 生成。如有改進建議，歡迎提交 PR。
 
-<h1 align="center">cmux</h1>
+<h1 align="center">素幕</h1>
+<p align="center">sumux</p>
 <p align="center">基於 Ghostty 的 macOS 終端機，具備垂直分頁和為 AI 程式設計代理設計的通知系統</p>
 
 <p align="center">

@@ -1,5 +1,6 @@
-<h1 align="center">cmux</h1>
-<p align="center">A Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents</p>
+<h1 align="center">素幕</h1>
+<p align="center">sumux · a local fork of cmux</p>
+<p align="center">A Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents. Cloud services, the paid checkout, and the BUSL server directories are not in this tree.</p>
 
 <p align="center">
   <a href="https://github.com/manaflow-ai/cmux/releases/latest/download/cmux-macos.dmg">
@@ -421,6 +422,6 @@ Ways to get involved:
 
 ## License
 
-This fork is GPL-only under [GPL-3.0-or-later](LICENSE). The Business Source
+素幕 (sumux) is GPL-only under [GPL-3.0-or-later](LICENSE). The Business Source
 License server directories are not included, and the paid Founder's Edition
 checkout is not part of this fork.

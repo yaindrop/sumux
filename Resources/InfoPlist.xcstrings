@@ -8,19 +8,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "A program running within cmux would like to use Bluetooth to discover passkeys and security keys."
+            "value": "A program running within sumux would like to use Bluetooth to discover passkeys and security keys."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux 内で実行中のプログラムが、パスキーとセキュリティキーを検出するために Bluetooth の使用を求めています。"
+            "value": "sumux 内で実行中のプログラムが、パスキーとセキュリティキーを検出するために Bluetooth の使用を求めています。"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在 cmux 中运行的程序想要使用蓝牙来发现通行密钥和安全密钥。"
+            "value": "在素幕中运行的程序想要使用蓝牙来发现通行密钥和安全密钥。"
           }
         }
       }
@@ -31,19 +31,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "A program running within cmux would like to use your camera."
+            "value": "A program running within sumux would like to use your camera."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux 内で実行中のプログラムがカメラの使用を求めています。"
+            "value": "sumux 内で実行中のプログラムがカメラの使用を求めています。"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在 cmux 中运行的程序想要使用您的摄像头。"
+            "value": "在素幕中运行的程序想要使用您的摄像头。"
           }
         }
       }
@@ -54,335 +54,358 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "A program running within cmux would like to use your microphone."
+            "value": "A program running within sumux would like to use your microphone."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux 内で実行中のプログラムがマイクの使用を求めています。"
+            "value": "sumux 内で実行中のプログラムがマイクの使用を求めています。"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在 cmux 中运行的程序想要使用您的麦克风。"
+            "value": "在素幕中运行的程序想要使用您的麦克风。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "在 cmux 中執行的程式想要使用您的麥克風。"
+            "value": "在素幕中執行的程式想要使用您的麥克風。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux 내에서 실행 중인 프로그램이 마이크를 사용하려고 합니다."
+            "value": "sumux 내에서 실행 중인 프로그램이 마이크를 사용하려고 합니다."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ein in cmux ausgeführtes Programm möchte Ihr Mikrofon verwenden."
+            "value": "Ein in sumux ausgeführtes Programm möchte Ihr Mikrofon verwenden."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un programa en ejecución dentro de cmux desea usar tu micrófono."
+            "value": "Un programa en ejecución dentro de sumux desea usar tu micrófono."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un programme s'exécutant dans cmux souhaite utiliser votre microphone."
+            "value": "Un programme s'exécutant dans sumux souhaite utiliser votre microphone."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un programma in esecuzione in cmux desidera utilizzare il microfono."
+            "value": "Un programma in esecuzione in sumux desidera utilizzare il microfono."
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Et program, der kører i cmux, vil gerne bruge din mikrofon."
+            "value": "Et program, der kører i sumux, vil gerne bruge din mikrofon."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Program działający w cmux chciałby użyć Twojego mikrofonu."
+            "value": "Program działający w sumux chciałby użyć Twojego mikrofonu."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Программа, запущенная в cmux, хотела бы использовать ваш микрофон."
+            "value": "Программа, запущенная в sumux, хотела бы использовать ваш микрофон."
           }
         },
         "bs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Program koji se izvršava unutar cmux želi koristiti vaš mikrofon."
+            "value": "Program koji se izvršava unutar sumux želi koristiti vaš mikrofon."
           }
         },
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "يرغب برنامج يعمل داخل cmux في استخدام الميكروفون."
+            "value": "يرغب برنامج يعمل داخل sumux في استخدام الميكروفون."
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Et program som kjører i cmux ønsker å bruke mikrofonen din."
+            "value": "Et program som kjører i sumux ønsker å bruke mikrofonen din."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Um programa em execução no cmux gostaria de usar seu microfone."
+            "value": "Um programa em execução no sumux gostaria de usar seu microfone."
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "โปรแกรมที่ทำงานภายใน cmux ต้องการใช้ไมโครโฟนของคุณ"
+            "value": "โปรแกรมที่ทำงานภายใน sumux ต้องการใช้ไมโครโฟนของคุณ"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "cmux içinde çalışan bir program mikrofonunuzu kullanmak istiyor."
+            "value": "sumux içinde çalışan bir program mikrofonunuzu kullanmak istiyor."
           }
         }
       }
     },
-    "New $(PRODUCT_NAME) Workspace Here": {
+    "New sumux Workspace Here": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "New $(PRODUCT_NAME) Workspace Here"
+            "value": "New sumux Workspace Here"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "ここに新規 $(PRODUCT_NAME) ワークスペースを作成"
+            "value": "ここに新規 sumux ワークスペースを作成"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在此新建 $(PRODUCT_NAME) 工作区"
+            "value": "在此新建 sumux 工作区"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "在此新增 $(PRODUCT_NAME) 工作區"
+            "value": "在此新增 sumux 工作區"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "여기에 새 $(PRODUCT_NAME) 작업 공간"
+            "value": "여기에 새 sumux 작업 공간"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Neuer $(PRODUCT_NAME)-Arbeitsbereich hier"
+            "value": "Neuer sumux-Arbeitsbereich hier"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nuevo espacio de trabajo de $(PRODUCT_NAME) aquí"
+            "value": "Nuevo espacio de trabajo de sumux aquí"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nouvel espace de travail $(PRODUCT_NAME) ici"
+            "value": "Nouvel espace de travail sumux ici"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nuova area di lavoro $(PRODUCT_NAME) qui"
+            "value": "Nuova area di lavoro sumux qui"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nyt $(PRODUCT_NAME)-arbejdsområde her"
+            "value": "Nyt sumux-arbejdsområde her"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nowa przestrzeń robocza $(PRODUCT_NAME) tutaj"
+            "value": "Nowa przestrzeń robocza sumux tutaj"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Новое рабочее пространство $(PRODUCT_NAME) здесь"
+            "value": "Новое рабочее пространство sumux здесь"
           }
         },
         "bs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Novi $(PRODUCT_NAME) radni prostor ovdje"
+            "value": "Novi sumux radni prostor ovdje"
           }
         },
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "مساحة عمل $(PRODUCT_NAME) جديدة هنا"
+            "value": "مساحة عمل sumux جديدة هنا"
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nytt $(PRODUCT_NAME)-arbeidsområde her"
+            "value": "Nytt sumux-arbeidsområde her"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nova Área de Trabalho do $(PRODUCT_NAME) Aqui"
+            "value": "Nova Área de Trabalho do sumux Aqui"
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "เวิร์กสเปซ $(PRODUCT_NAME) ใหม่ที่นี่"
+            "value": "เวิร์กสเปซ sumux ใหม่ที่นี่"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Buraya Yeni $(PRODUCT_NAME) Çalışma Alanı"
+            "value": "Buraya Yeni sumux Çalışma Alanı"
           }
         }
       }
     },
-    "New $(PRODUCT_NAME) Window Here": {
+    "New sumux Window Here": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "New $(PRODUCT_NAME) Window Here"
+            "value": "New sumux Window Here"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "ここに新規 $(PRODUCT_NAME) ウインドウを作成"
+            "value": "ここに新規 sumux ウインドウを作成"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在此新建 $(PRODUCT_NAME) 窗口"
+            "value": "在此新建 sumux 窗口"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "在此新增 $(PRODUCT_NAME) 視窗"
+            "value": "在此新增 sumux 視窗"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "여기에 새 $(PRODUCT_NAME) 윈도우"
+            "value": "여기에 새 sumux 윈도우"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Neues $(PRODUCT_NAME)-Fenster hier"
+            "value": "Neues sumux-Fenster hier"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nueva ventana de $(PRODUCT_NAME) aquí"
+            "value": "Nueva ventana de sumux aquí"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nouvelle fenêtre $(PRODUCT_NAME) ici"
+            "value": "Nouvelle fenêtre sumux ici"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nuova finestra $(PRODUCT_NAME) qui"
+            "value": "Nuova finestra sumux qui"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nyt $(PRODUCT_NAME)-vindue her"
+            "value": "Nyt sumux-vindue her"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nowe okno $(PRODUCT_NAME) tutaj"
+            "value": "Nowe okno sumux tutaj"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Новое окно $(PRODUCT_NAME) здесь"
+            "value": "Новое окно sumux здесь"
           }
         },
         "bs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Novi $(PRODUCT_NAME) prozor ovdje"
+            "value": "Novi sumux prozor ovdje"
           }
         },
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "نافذة $(PRODUCT_NAME) جديدة هنا"
+            "value": "نافذة sumux جديدة هنا"
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nytt $(PRODUCT_NAME)-vindu her"
+            "value": "Nytt sumux-vindu her"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nova Janela do $(PRODUCT_NAME) Aqui"
+            "value": "Nova Janela do sumux Aqui"
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "หน้าต่าง $(PRODUCT_NAME) ใหม่ที่นี่"
+            "value": "หน้าต่าง sumux ใหม่ที่นี่"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Buraya Yeni $(PRODUCT_NAME) Penceresi"
+            "value": "Buraya Yeni sumux Penceresi"
+          }
+        }
+      }
+    },
+    "sumux": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sumux"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "素幕"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "素幕"
           }
         }
       }

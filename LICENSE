@@ -6,7 +6,7 @@ Except where a file or accompanying notice states otherwise, material
 contributed under the cmux project license is licensed under the GNU General
 Public License v3.0 or later (GPL-3.0-or-later). See the full text below.
 
-This fork is GPL-only. It removes the server directories Manaflow licenses
+This fork is published as 素幕 (sumux). It is GPL-only. It removes the server directories Manaflow licenses
 under the Business Source License 1.1, and it does not relicense that code:
 
   web/                          (web/data/cmux.schema.json is kept at schema/)

@@ -1,6 +1,7 @@
 > ការបកប្រែនេះត្រូវបានបង្កើតដោយ Claude។ ប្រសិនបើអ្នកមានការកែលម្អ សូមបង្កើត PR។
 
-<h1 align="center">cmux</h1>
+<h1 align="center">素幕</h1>
+<p align="center">sumux</p>
 <p align="center">Terminal សម្រាប់ macOS ផ្អែកលើ Ghostty ដែលមាន tab បញ្ឈរ និងការជូនដំណឹងសម្រាប់ AI coding agents</p>
 
 <p align="center">

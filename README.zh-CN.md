@@ -1,7 +1,8 @@
 > 此翻译由 Claude 生成。如有改进建议，欢迎提交 PR。
 
-<h1 align="center">cmux</h1>
-<p align="center">基于 Ghostty 的 macOS 终端，带有垂直标签页和为 AI 编程代理设计的通知系统</p>
+<h1 align="center">素幕</h1>
+<p align="center">sumux</p>
+<p align="center">cmux 的本地 fork：基于 Ghostty 的 macOS 终端，带有垂直标签页和为 AI 编程代理设计的通知。这个仓库不含云服务、付费入口和 BUSL 服务端。</p>
 
 <p align="center">
   <a href="https://github.com/manaflow-ai/cmux/releases/latest/download/cmux-macos.dmg">
@@ -401,4 +402,4 @@ tmux 是一个在任意终端内运行的终端复用器。cmux 是一个带 GUI
 
 ## 许可证
 
-这份 fork 只使用 [GPL-3.0-or-later](LICENSE)。Business Source License 的服务端目录不在其中，也不包含付费的 Founder's Edition。
+素幕（sumux）只使用 [GPL-3.0-or-later](LICENSE)。Business Source License 的服务端目录不在其中，也不包含付费的 Founder's Edition。

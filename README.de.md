@@ -1,6 +1,7 @@
 > Diese Übersetzung wurde von Claude erstellt. Verbesserungsvorschläge sind als PR willkommen.
 
-<h1 align="center">cmux</h1>
+<h1 align="center">素幕</h1>
+<p align="center">sumux</p>
 <p align="center">Ein Ghostty-basiertes macOS-Terminal mit vertikalen Tabs und Benachrichtigungen für AI-Coding-Agenten</p>
 
 <p align="center">
