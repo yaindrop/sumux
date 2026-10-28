@@ -245,6 +245,11 @@ final class MainWindowVisibilityController {
             trace("dismiss.softHide.begin", reason: reason, windows: [window])
             dependencies.windowOperations.softHide(window)
             trace("dismiss.softHide.end", reason: reason, windows: [window])
+            // Alpha-only hide stays in Mission Control. orderOut leaves the screen
+            // without closing the window, so its terminals keep running.
+            trace("dismiss.orderOut.begin", reason: reason, windows: [window])
+            dependencies.windowOperations.orderOut(window)
+            trace("dismiss.orderOut.end", reason: reason, windows: [window])
         }
         log("dismiss", reason: reason, windows: windows)
     }

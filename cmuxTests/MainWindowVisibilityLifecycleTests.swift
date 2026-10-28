@@ -11,6 +11,30 @@ import Testing
 @Suite
 struct MainWindowVisibilityLifecycleTests {
     @Test
+    func lastMainWindowCloseHidesInsteadOfQuitting() {
+        #expect(AppDelegate.hidesLastMainWindowInsteadOfQuitting(
+            isRunningUnderXCTest: false,
+            isTerminatingApp: false,
+            mainWindowCount: 1
+        ))
+        #expect(!AppDelegate.hidesLastMainWindowInsteadOfQuitting(
+            isRunningUnderXCTest: false,
+            isTerminatingApp: false,
+            mainWindowCount: 2
+        ))
+        #expect(!AppDelegate.hidesLastMainWindowInsteadOfQuitting(
+            isRunningUnderXCTest: true,
+            isTerminatingApp: false,
+            mainWindowCount: 1
+        ))
+        #expect(!AppDelegate.hidesLastMainWindowInsteadOfQuitting(
+            isRunningUnderXCTest: false,
+            isTerminatingApp: true,
+            mainWindowCount: 1
+        ))
+    }
+
+    @Test
     func discardClosedWindowRemovesHiddenRestoreTarget() {
         let window = makeWindow()
         defer { window.orderOut(nil) }

@@ -180,8 +180,9 @@ final class MainWindowVisibilityControllerTests: XCTestCase {
         let window = makeWindow()
         defer { window.orderOut(nil) }
 
-        let visibleIds: Set<ObjectIdentifier> = [ObjectIdentifier(window)]
-        var softHiddenWindows: [NSWindow] = [], orderedRegardlessWindows: [NSWindow] = []
+        var visibleIds: Set<ObjectIdentifier> = [ObjectIdentifier(window)]
+        var softHiddenWindows: [NSWindow] = [], orderedOutWindows: [NSWindow] = []
+        var orderedRegardlessWindows: [NSWindow] = []
         var deminiaturizedWindows: [NSWindow] = [], madeKeyWindows: [NSWindow] = []
         var activationCount = 0
 
@@ -197,6 +198,10 @@ final class MainWindowVisibilityControllerTests: XCTestCase {
                     deminiaturize: { deminiaturizedWindows.append($0) },
                     makeKey: { madeKeyWindows.append($0) },
                     orderFrontRegardless: { orderedRegardlessWindows.append($0) },
+                    orderOut: { window in
+                        visibleIds.remove(ObjectIdentifier(window))
+                        orderedOutWindows.append(window)
+                    },
                     softHide: { softHiddenWindows.append($0) }
                 )
             )
@@ -206,6 +211,7 @@ final class MainWindowVisibilityControllerTests: XCTestCase {
         _ = controller.showApplicationWindows(windows: [window], reason: .applicationReopen)
 
         XCTAssertTrue(softHiddenWindows.contains { $0 === window })
+        XCTAssertTrue(orderedOutWindows.contains { $0 === window })
         XCTAssertTrue(orderedRegardlessWindows.contains { $0 === window })
         XCTAssertTrue(madeKeyWindows.contains { $0 === window })
         XCTAssertEqual(activationCount, 1)
@@ -498,6 +504,7 @@ final class MainWindowVisibilityControllerTests: XCTestCase {
         makeKey: @escaping (NSWindow) -> Void = { _ in },
         orderFront: @escaping (NSWindow) -> Void = { _ in },
         orderFrontRegardless: @escaping (NSWindow) -> Void = { _ in },
+        orderOut: @escaping (NSWindow) -> Void = { _ in },
         softHide: @escaping (NSWindow) -> Void = { _ in },
         softShow: @escaping (NSWindow) -> Void = { _ in }
     ) -> MainWindowVisibilityController.WindowOperations {
@@ -512,7 +519,7 @@ final class MainWindowVisibilityControllerTests: XCTestCase {
             makeKey: makeKey,
             orderFront: orderFront,
             orderFrontRegardless: orderFrontRegardless,
-            orderOut: { _ in },
+            orderOut: orderOut,
             softHide: softHide,
             softShow: softShow
         )

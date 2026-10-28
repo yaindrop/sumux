@@ -1031,6 +1031,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCent
 
     var mainWindowContexts: [ObjectIdentifier: MainWindowContext] = [:]
     private var mainWindowControllers: [MainWindowController] = []
+    /// Set while a fullscreen last window is leaving its Space before being ordered out.
+    private var pendingLastMainWindowBackgroundHide: NSWindow?
+    private var lastMainWindowBackgroundHideObserver: NSObjectProtocol?
 
     /// Tracks the cascade point for new windows, matching Ghostty's upstream algorithm.
     /// Reset to `.zero` so the first window seeds the point from its own position.
@@ -1315,6 +1318,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCent
     }
 
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        cancelPendingLastMainWindowBackgroundHide()
         if hasVisibleMainTerminalWindow() {
             _ = synchronizeActiveMainWindowContext(preferredWindow: NSApp.keyWindow ?? NSApp.mainWindow)
             return true
@@ -2142,6 +2146,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCent
     }
 
     func applicationWillTerminate(_ notification: Notification) {
+        cancelPendingLastMainWindowBackgroundHide()
         StartupBreadcrumbLog.append("appDelegate.willTerminate.begin")
         // Backstop for any terminate path that did not route through
         // prepareForConfirmedAppTermination() (idempotent with the primary arm).
@@ -9117,7 +9122,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCent
             self.mainWindowControllers.removeAll(where: { $0 === controller })
         }
         controller.shouldClose = { [weak self] in
-            let shouldClose = self?.handleMainTerminalWindowShouldClose() ?? true
+            let shouldClose = self?.handleMainTerminalWindowShouldClose(window) ?? true
             if !shouldClose {
                 self?.closedWindowHistorySuppressedWindowIds.remove(windowId)
                 // Close CANCELLED (a genuine veto, not a confirmed quit): clear any
@@ -9569,6 +9574,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCent
     }
 
     @discardableResult func showMainWindowFromMenuBar() -> NSWindow? {
+        cancelPendingLastMainWindowBackgroundHide()
         if let window = mainWindowVisibilityController.showApplicationWindows(
             windows: mainWindowsForVisibilityController(),
             reason: .menuBar
@@ -16693,13 +16699,63 @@ final class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCent
 #endif
     }
 
-    private func handleMainTerminalWindowShouldClose() -> Bool {
-        // XCTest has no UI for the warn-before-quit dialog and would either block
-        // on runModal or have NSApp.terminate kill the test process.
-        if isRunningUnderXCTest(ProcessInfo.processInfo.environment) { return true }
-        guard !isTerminatingApp, mainWindowContexts.count <= 1 else { return true }
-        _ = handleQuitShortcutWarning()
+    static func hidesLastMainWindowInsteadOfQuitting(
+        isRunningUnderXCTest: Bool,
+        isTerminatingApp: Bool,
+        mainWindowCount: Int
+    ) -> Bool {
+        !isRunningUnderXCTest && !isTerminatingApp && mainWindowCount <= 1
+    }
+
+    private func handleMainTerminalWindowShouldClose(_ window: NSWindow) -> Bool {
+        guard Self.hidesLastMainWindowInsteadOfQuitting(
+            isRunningUnderXCTest: isRunningUnderXCTest(ProcessInfo.processInfo.environment),
+            isTerminatingApp: isTerminatingApp,
+            mainWindowCount: mainWindowContexts.count
+        ) else { return true }
+        hideLastMainWindowKeepingSessions(window)
         return false
+    }
+
+    /// Keeps the window object, its tabs, and their shells. Dock Quit still terminates.
+    private func hideLastMainWindowKeepingSessions(_ window: NSWindow) {
+        guard window.styleMask.contains(.fullScreen) else {
+            dismissMainWindowFromWindowChrome(window)
+            return
+        }
+        // Fullscreen exit is async. orderOut during the transition leaves an empty Space.
+        // shortcut: Dock reopen and the menu-bar show cancel this; other focus paths during the animation can still hide the window.
+        pendingLastMainWindowBackgroundHide = window
+        if let lastMainWindowBackgroundHideObserver {
+            NotificationCenter.default.removeObserver(lastMainWindowBackgroundHideObserver)
+            self.lastMainWindowBackgroundHideObserver = nil
+        }
+        lastMainWindowBackgroundHideObserver = NotificationCenter.default.addObserver(
+            forName: NSWindow.didExitFullScreenNotification,
+            object: window,
+            queue: .main
+        ) { [weak self, weak window] _ in
+            Task { @MainActor in
+                guard let self, let window else { return }
+                guard self.pendingLastMainWindowBackgroundHide === window, !self.isTerminatingApp else { return }
+                self.pendingLastMainWindowBackgroundHide = nil
+                self.clearLastMainWindowBackgroundHideObserver()
+                self.dismissMainWindowFromWindowChrome(window)
+            }
+        }
+        window.toggleFullScreen(nil)
+    }
+
+    private func cancelPendingLastMainWindowBackgroundHide() {
+        pendingLastMainWindowBackgroundHide = nil
+        clearLastMainWindowBackgroundHideObserver()
+    }
+
+    private func clearLastMainWindowBackgroundHideObserver() {
+        if let lastMainWindowBackgroundHideObserver {
+            NotificationCenter.default.removeObserver(lastMainWindowBackgroundHideObserver)
+            self.lastMainWindowBackgroundHideObserver = nil
+        }
     }
 
     private func unregisterMainWindow(_ window: NSWindow) {
