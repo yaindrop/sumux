@@ -179,13 +179,13 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在此新建 sumux 工作区"
+            "value": "在此新建素幕工作区"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "在此新增 sumux 工作區"
+            "value": "在此新增素幕工作區"
           }
         },
         "ko": {
@@ -292,13 +292,13 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "在此新建 sumux 窗口"
+            "value": "在此新建素幕窗口"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "在此新增 sumux 視窗"
+            "value": "在此新增素幕視窗"
           }
         },
         "ko": {
